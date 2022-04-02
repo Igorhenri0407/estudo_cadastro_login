@@ -11,6 +11,20 @@
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 import sqlite3
 
+
+def checar_lineEdit():
+    login = ui.lineEdit_login.text()
+    senha = ui.lineEdit_senha.text()
+
+    if login and senha  != "":
+        validar_login()
+
+    else:
+        ui.frame_erro.show()
+        ui.texto_erro.setText('Possui Campos Vazios')
+
+
+
 def validar_login():
     login = ui.lineEdit_login.text()
     senha1 = ui.lineEdit_senha.text()
@@ -271,7 +285,7 @@ class Ui_bg_tela_cadastro(object):
         # BOTAO NAO TEM LOGIN
         ui.pushButton_nao_tem_login.clicked.connect(abre_tela_cadastro)
         # BOTAO LOGIN
-        ui.pushButton_login.clicked.connect(validar_login)
+        ui.pushButton_login.clicked.connect(checar_lineEdit)
 
         self.retranslateUi(bg_tela_cadastro)
         QtCore.QMetaObject.connectSlotsByName(bg_tela_cadastro)
