@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="icon_user">
+    <file>user.png</file>
+  </qresource>
+  <qresource prefix="icon_fechar">
+    <file>fechar-o-simbolo-quadrado-arredondado-da-interface-com-uma-cruz (1).png</file>
+  </qresource>
+  <qresource prefix="icon_senha">
+    <file>cadeado.png</file>
+  </qresource>
+  <qresource prefix="icon_email">
+    <file>email-marketing.png</file>
+  </qresource>
+</RCC>
